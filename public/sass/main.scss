@@ -1,0 +1,70 @@
+@import 'vendor/bootstrap';
+@import 'vendor/inner-circles';
+@import 'partials/mixins';
+
+.main {
+  width: 95%; 
+  margin: 0 auto;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+.parsley-errors-list {
+    list-style-type: none;
+    color: red;
+    padding: 0.4rem 0 0 0;
+}
+
+.report-form {
+    margin-top: 3rem;
+}
+
+.inner-circles-loader {
+    position: relative;
+    z-index: 3;
+    left: 46%;
+    top: calc(50vh - 5rem);
+}
+
+.loader-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 90rem;
+  top: 0;
+  left: 0;
+  z-index: 1;  
+}
+
+.loader-background {
+  position: absolute;
+  width: 100%;
+  height: 90rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #eee;
+  opacity: 0.8;
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}

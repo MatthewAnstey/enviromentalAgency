@@ -1,0 +1,57 @@
+{{>head}}
+<body>
+{{>config}}
+
+    {{>navigation}}
+    
+	<div class="main" role="main">
+
+		<h1>Report Incident</h1>
+
+		<form class="report-form" role="form" action="" method="POST" enctype="multipart/form-data">
+	        <div class="form-group"> 
+		        <button class="js-get-location">Location</button>
+		        <div class="js-map-wrapper"></div>
+
+		        <input type="hidden" required name="longitude" id="longitude" class="js-longitude"/>
+		        <input type="hidden" required name="latitude" id="latitude" class="js-latitude"/>
+		        <input type="hidden" name="time" id="time" class="js-time"/>
+		        <input type="hidden" name="rand" id="rand" class="js-rand"/>
+		    </div>
+
+		    <div class="form-group"> 
+		        <label class="visuallyhidden" for="firstName">First Name</label>
+
+				<input required type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name"/> 
+			</div>
+
+			<div class="form-group">
+			    <label class="visuallyhidden" for="secondName">Second Name</label>
+
+			    <input required type="text" class="form-control" name="secondName" id="secondName" placeholder="Second Name"/> 
+			</div>
+
+	        <div class="form-group">
+	            <label class="visuallyhidden" for="take-picture">Upload photos</label>
+
+			    <input type="file" id="takePicture" name="takePicture" accept="image/*"/>
+			</div>
+	         
+	        <div class="form-group">
+				<textarea required id="description" class="form-control" name="description"  placeholder="Describe the incident"></textarea>
+			</div>	
+
+			<button class="js-submit">Report Incident</button>
+		</form>
+
+		<div class="loader-wrapper hide js-inner-circles-loader">
+		    <div class="loader-background"></div> 
+		    <div class="inner-circles-loader"></div> 
+		</div>
+
+		</div>
+
+	</div>
+
+	     {{>scripts}}
+</body>
